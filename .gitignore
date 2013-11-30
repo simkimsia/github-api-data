@@ -4,3 +4,6 @@
 /app/tmp
 /Plugin
 /vendor
+!empty
+.DS_Store
+composer.lock
