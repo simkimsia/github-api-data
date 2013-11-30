@@ -22,6 +22,7 @@
  */
 
 App::uses('Model', 'Model');
+App::uses('FindXORCreatableBehavior', 'UtilityBehaviors.Model/Behavior');
 
 /**
  * Application model for Cake.
@@ -32,4 +33,21 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+
+/**
+ * recursive
+ *
+ * @var int
+ */
+	public $recursive = -1;
+
+/**
+ * behaviors used by model
+ *
+ * @var array
+ */
+	public $actsAs = [
+		'Containable',
+		'UtilityBehaviors.FindXORCreatable'
+	];
 }

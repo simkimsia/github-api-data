@@ -1,0 +1,8 @@
+<?php
+class GITHUB_CONFIG {
+
+	public $default = [
+		'login' => '',
+		'password' => ''
+	];
+}
