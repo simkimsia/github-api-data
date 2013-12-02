@@ -20,8 +20,13 @@ To run the data extraction in your localhost
  3. Create a `database.php` inside `app/Config/database.php` by copying from database.php.default. Change the login and password accordingly
  4. Do the same for `github.php` in the same folder. Once again, please change your login and password accordingly.
  5. Restore the database from the .sql file inside the `data` folder
- 6. Visit the relative url path from your domain `/searches/store/1`. This will download all the repositories that are relevant to the searched keyword `php` and use the language `php`. The code is in the `app/Model/Search`.
- 7. Visit the relative url path from your domain `/repositories/store_contributors`. **You need to run this several times and each time change the number in line 15 of the app/Controller/RepositoryController**. This is because you may get timed out trying to retrieve so many information. Each time you re-run, just look at the `contributors` datatable and re-start from the largest `repository_id` your app stops at.
+ 6. Open Terminal and navigate to the root folder of the project.
+ Run
+ ```
+ php composer.phar update
+ ```
+ 7. Visit the relative url path from your domain `/searches/store/1`. This will download all the repositories that are relevant to the searched keyword `php` and use the language `php`. The code is in the `app/Model/Search`.
+ 8. Visit the relative url path from your domain `/repositories/store_contributors`. **You need to run this several times and each time change the number in line 15 of the app/Controller/RepositoryController**. This is because you may get timed out trying to retrieve so many information. Each time you re-run, just look at the `contributors` datatable and re-start from the largest `repository_id` your app stops at.
 
 
 To assemble the edges table
