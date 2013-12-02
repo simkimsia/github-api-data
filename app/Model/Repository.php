@@ -39,19 +39,6 @@ class Repository extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Stargazer' => array(
-			'className' => 'Stargazer',
-			'foreignKey' => 'repository_id',
-			'dependent' => false,
-			'conditions' => '',
-			'fields' => '',
-			'order' => '',
-			'limit' => '',
-			'offset' => '',
-			'exclusive' => '',
-			'finderQuery' => '',
-			'counterQuery' => ''
-		)
 	);
 
 	public function store_contributors($id) {
